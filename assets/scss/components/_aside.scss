@@ -74,7 +74,7 @@
         }
         img {
             width: 112px;
-            border: 2px solid $primary-color;
+            border: 4px solid $primary-color;
             @include shadow(2);
         }
     }
@@ -91,7 +91,6 @@
                 border-radius: 20px;
                 background: $primary-color;
                 color: $slate-white;
-                @include btn-cover-with-border;
 
                 a {
                     padding: 10px 20px;
@@ -106,10 +105,6 @@
                 &:hover {
                     background: $hover-color-inverse;
                 }
-
-                &:first-child {
-                     @include btn-cover-with-border;
-                }
             }
         }
     }
@@ -123,7 +118,7 @@
         li {
             display: inline-block;
             line-height: 16px;
-            border-left: 1px solid $slate-white;
+            width: 100px;
 
             &:first-child {
                 border: none;

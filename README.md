@@ -106,12 +106,12 @@ Make sure to set up some of your default settings within your Ghost Admin panel 
 On every page there is an icon on the upper-left hand corner that will open the splash screen. If you'd rather set your own icon, overwrite the `icon.png` within `assets/img/icon`. Or, if you rather not use an icon, you can simply open up the `partials/header.hbs` and uncomment the following line:
 
 ```html
-<img src="{{@blog.logo}}" alt="{{@blog.title}} avatar" class="avatar rounded hvr-buzz-out" />
+<img src="{{@blog.logo}}" alt="{{@blog.title}} avatar" class="avatar rounded hvr-grow" />
 ```
 and delete the following line:
 
 ```html
- <img src="{{asset "img/icons/icon.png"}}" alt="{{@blog.title}} icon" class="icon rounded hvr-buzz-out" />
+ <img src="{{asset "img/icons/icon.png"}}" alt="{{@blog.title}} icon" class="icon rounded hvr-grow" />
 ```
 
 ### Favicons
