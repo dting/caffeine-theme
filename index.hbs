@@ -1,10 +1,12 @@
 {{!< default}}
 {{> material-cover}}
 <div class="page page-index container-wrapper">
-    <ol class="posts">
-        {{#foreach posts}}
-         {{> post-list-item }}
-        {{/foreach}}
-    </ol>
+  <ol class="posts">
+    {{#foreach posts}}
+      {{^has tag="project"}}
+        {{> post-list-item }}
+      {{/has}}
+    {{/foreach}}
+  </ol>
 </div>
 {{pagination}}
