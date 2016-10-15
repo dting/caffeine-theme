@@ -37,6 +37,7 @@
     "gulp-concat": "*",
     "gulp-cssmin": "*",
     "gulp-header": "*",
+    "gulp-load-plugins": "^1.3.0",
     "gulp-minify-css": "*",
     "gulp-sass": "*",
     "gulp-strip-css-comments": "*",
