@@ -1,146 +1,146 @@
 .cover {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    z-index: 0;
-    display: block;
-    text-align: center;
-    overflow: hidden;
-    background: center center no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-color: $slate-gray;
+  z-index          : 0;
+  display          : block;
+  position         : fixed;
+  width            : 100%;
+  height           : 100%;
+  opacity          : 0;
+  overflow         : hidden;
+  background       : center center no-repeat;
+  background-color : $slate-gray;
+  background-size  : cover;
+  text-align       : center;
 
-    &.expanded {
-        opacity: 1;
-        z-index: 15;
+  &.expanded {
+    z-index : 15;
+    opacity : 1;
 
-        .blog-header {
-            display: none;
-        }
+    .blog-header {
+      display : none;
     }
+  }
 
-    .background-container {
-        height: 100%;
-        width: 100%;
-        font-weight: $font-weight-thin;
-        text-align: center;
-        color: $gray-lightest;
-        @include font-shadow;
-        @include center-absolute;
-        @include background-filter;
-    }
+  .background-container {
+    @include      background-filter;
+    @include      center-absolute;
+    @include      font-shadow;
+    width       : 100%;
+    height      : 100%;
+    color       : $gray-lightest;
+    text-align  : center;
+    font-weight : $font-weight-thin;
+  }
 }
 
 .blog-header {
-    z-index: 3;
-    position: absolute;
-    width: 100%;
-    text-align: center;
+  z-index    : 3;
+  position   : absolute;
+  width      : 100%;
+  text-align : center;
 
-    h1 {
-        color: $slate-white;
-        margin: 100px 0 10px;
-        font-size: $unit * 2.75;
-        @include font-shadow;
+  h1 {
+    @include    font-shadow;
+    margin    : 100px 0 10px;
+    color     : $slate-white;
+    font-size : $unit * 2.75;
 
-        &:hover {
-            color: $pre-hover-color;
-        }
+    &:hover {
+      color : $pre-hover-color;
     }
+  }
 }
 
 .profile {
-    max-width: 620px;
-    p {
-        margin: 0 32px;
-        font-size: 14px;
+  max-width : 620px;
+
+  p {
+    margin    : 0 32px;
+    font-size : 14px;
+  }
+
+  a {
+    h1 {
+      margin      : 0;
+      margin      : 8px 0;
+      color       : $slate-white;
+      font-family : $sans-font;
+      font-size   : $unit * 2;
     }
-    a {
-        h1 {
-            margin: 0;
-            font-family: $sans-font;
-            font-size: $unit * 2;
-            color: $slate-white;
-            margin: 8px 0;
-        }
-        h3 {
-            margin: 8px 0 24px;
-            color: $slate-white;
-            font-size: 18px;
-        }
-        img {
-            width: 112px;
-            border: 4px solid $slate-white;
-            @include shadow(2);
-        }
+
+    h3 {
+      margin    : 8px 0 24px;
+      color     : $slate-white;
+      font-size : 18px;
     }
+
+    img {
+      @include   shadow(2);
+      width    : 112px;
+      border   : 4px solid $slate-white;
+    }
+  }
 }
 
 .call-to-action-container {
-    margin: 18px 0;
+  margin : 18px 0;
 
-    .navigation {
-        .links {
-            li {
-                display: inline-block;
-                margin: 0 5px;
-                border-radius: 20px;
-                background: $primary-color;
-                color: $slate-white;
+  .navigation {
+    .links {
+      li {
+        display       : inline-block;
+        margin        : 0 5px;
+        color         : $slate-white;
+        border-radius : 20px;
+        background    : $primary-color;
 
-                a {
-                    padding: 10px 20px;
-                    font-size: 14px;
-                    @include btn-cover;
+        a {
+          @include    btn-cover;
+          padding   : 10px 20px;
+          font-size : 14px;
 
-                    &:hover {
-                        color: $primary-color;
-                    }
-                }
-
-                &:hover {
-                    background: $hover-color-inverse;
-                }
-            }
+          &:hover {
+            color : $primary-color;
+          }
         }
+
+        &:hover {
+          background : $hover-color-inverse;
+        }
+      }
     }
+  }
 }
 
 .navigation {
-    .links {
-        margin: 0;
-        list-style: none;
+  .links {
+    margin     : 0;
+    list-style : none;
 
-        li {
-            display: inline-block;
-            line-height: 16px;
-            width: 100px;
+    li {
+      display     : inline-block;
+      width       : 100px;
+      line-height : 16px;
 
-            &:first-child {
-                border: none;
-            }
+      &:first-child {
+        border : none;
+      }
 
-            &.hide {
-                display: none;
-            }
+      &.hide {
+        display : none;
+      }
 
-            a {
-                display: block;
-                float: none;
-                padding: 8px 20px 8px 22px;
-                font-size: 18px;
-                color: $slate-white;
+      a {
+        @include    font-shadow;
+        display   : block;
+        float     : none;
+        padding   : 8px 20px 8px 22px;
+        color     : $slate-white;
+        font-size : 18px;
 
-                @include font-shadow;
-
-                &:hover {
-                    color: $pre-hover-color ;
-                }
-            }
+        &:hover {
+          color : $pre-hover-color;
         }
+      }
     }
+  }
 }
