@@ -1,159 +1,169 @@
-img,
-.btn {
-    &.square {
-        border-radius: 0;
-    }
-    &.rounded {
-        border-radius: 50%;
-    }
+.btn,
+img {
+  &.square {
+    border-radius : 0;
+  }
+
+  &.rounded {
+    border-radius : 50%;
+  }
 }
 
 .btn {
-    padding: 10px 20px;
-    font-size: 14px;
-    -webkit-font-smoothing: antialiased;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: $primary-color;
-    border: 1px solid $primary-color;
-    border-radius: 20px;
-    text-shadow: none;
+  padding                : 10px 20px;
+  color                  : $primary-color;
+  border                 : 1px solid $primary-color;
+  border-radius          : 20px;
+  text-shadow            : none;
+  font-size              : 14px;
+  font-weight            : bold;
+  -webkit-font-smoothing : antialiased;
+  letter-spacing         : 1px;
+
+  &:hover {
+    color        : darken($primary-color, 15%);
+    border-color : darken($primary-color, 15%);
+  }
+
+  &.small {
+    padding   : 8px 12px;
+    font-size : 10px;
+  }
+
+  &.large {
+    padding   : 10px 24px;
+    font-size : 16px;
+  }
+
+  &.secondary {
+    color        : $secondary-color;
+    border-color : $secondary-color;
 
     &:hover {
-        color: darken($primary-color, 15%);
-        border-color: darken($primary-color, 15%);
+      color        : darken($secondary-color, 15%);
+      border-color : darken($secondary-color, 15%);
     }
-
-    &.small {
-        padding: 8px 12px;
-        font-size: 10px;
-    }
-
-    &.large {
-        padding: 10px 24px;
-        font-size: 16px;
-    }
-
-    &.secondary {
-        color: $secondary-color;
-        border-color: $secondary-color;
-
-        &:hover {
-            color: darken($secondary-color, 15%);
-            border-color: darken($secondary-color, 15%);
-        }
-    }
+  }
 }
 
 .card {
-    width: 48%;
-    margin: 0 1% 20px;
-    cursor: pointer;
-    background: white;
+  @include     transition(all 250ms);
+  @include     shadow(2);
+  width      : 48%;
+  margin     : 0 1% 20px;
+  background : white;
+  cursor     : pointer;
 
-    .card-content {
-        padding: 10px 30px 20px;
+  .card-content {
+    padding : 10px 30px 20px;
+  }
+
+  .card-footer {
+    padding    : 12px 30px;
+    border-top : 1px solid $gray-light;
+
+    .meta {
+      float  : left;
+      margin : 0;
     }
 
-    .card-footer {
-        padding: 12px 30px;
-        border-top: 1px solid $gray-light;
-
-        .meta {
-            float: left;
-            margin: 0;
-        }
-
-        .share {
-            float: right;
-        }
+    .share {
+      float : right;
     }
+  }
 
-    @include transition(all 250ms);
-    @include shadow(2);
-
-    &:hover {
-        @include shadow(3);
-        -webkit-transform: translateY(-5px) !important;
-        transform: translateY(-5px) !important;
-    }
+  &:hover {
+    @include            shadow(3);
+    -webkit-transform : translateY(-5px) !important;
+    transform         : translateY(-5px) !important;
+  }
 }
 
 ul {
-    &.share-buttons {
-        margin: 0;
-        list-style: none;
-        padding: 0;
+  &.share-buttons {
+    margin     : 0;
+    padding    : 0;
+    list-style : none;
 
-        li {
-            margin: 0;
-            display: inline-block;
+    li {
+      display : inline-block;
+      margin  : 0;
 
-            a {
-                color: rgba($primary-color, .7);
-                &:hover {
-                    color: rgba($primary-color, 1);
-                }
-            }
+      a {
+        color : rgba($primary-color, .7);
 
-            i {
-                font-size: 24px;
-            }
+        &:hover {
+          color : rgba($primary-color, 1);
         }
+      }
+
+      i {
+        font-size : 24px;
+      }
     }
+  }
 }
 
 .social {
-    margin: 0;
-    &.item {
-        display: inline-block;
-        margin: 0 4px 0 0;
-        line-height: 16px;
-        a {
-            padding: 6px 8px 6px 9px;
-            @include btn-cover;
-            .label {
-                display: none;
-            }
-            i {
-                display: block;
-                font-size: 24px;
-            }
-            &:hover {
-                color: $hover-color;
-            }
-        }
+  margin : 0;
+
+  &.item {
+    display     : inline-block;
+    margin      : 0 4px 0 0;
+    line-height : 16px;
+
+    a {
+      @include   btn-cover;
+      padding  : 6px 8px 6px 9px;
+
+      .label {
+        display : none;
+      }
+
+      i {
+        display   : block;
+        font-size : 24px;
+      }
+
+      &:hover {
+        color : $hover-color;
+      }
     }
+  }
 }
 
 .tags {
-    a {
-        @extend .animated;
+  a {
+    @extend            .animated;
+    padding          : 2px 4px;
+    color            : $gray-lightest;
+    border-radius    : 4px;
+    background-color : rgba($primary-color, .7);
+    text-transform   : uppercase;
+    font-size        : 8px;
 
-        padding: 2px 4px;
-        font-size: 8px;
-        text-transform: uppercase;
-        color: $gray-lightest;
-        border-radius: 4px;
-        background-color: rgba($primary-color, .7);
-        &:hover {
-            background-color: rgba($primary-color, 1);
-        }
+    &:hover {
+      background-color : rgba($primary-color, 1);
     }
+  }
 }
 
 .back-button {
-    font-size: 20px;
-    padding: 20px;
-    background: $primary-color;
-    position: absolute;
-    border-radius: 50%;
-    margin-top: -40px;
-    margin-left: 20px;
-    z-index: 10;
+  @include          shadow(2);
+  z-index         : 10;
+  display         : flex;
+  width           : 42px;
+  height          : 42px;
+  margin-left     : 20px;
+  border-radius   : 50%;
+  background      : $primary-color;
+  align-items     : center;
+  font-size       : 20px;
+  justify-content : center;
+  transform       : translateY(-50%);
+  cursor          : pointer;
 
-    i {
-        color: white;
-    }
-    @include shadow(2);
+  i {
+    color : white;
+  }
 }
