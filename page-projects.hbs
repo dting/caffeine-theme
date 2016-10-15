@@ -1,13 +1,17 @@
 {{!< default}}
 
-{{> material-cover}}
+{{#post}}
 
-<div class="page page-index container-wrapper">
-  <ol class="posts">
-    {{#get "posts" limit="all" include="author,tags" filter="tags:project"}}
-      {{#foreach posts}}
-        {{> post-list-item }}
-      {{/foreach}}
-    {{/get}}
-  </ol>
-</div>
+  {{> material-cover}}
+
+  <div class="page page-index container-wrapper">
+    <ol class="posts">
+      {{#get "posts" limit="all" include="author,tags" filter="tags:project"}}
+        {{#foreach posts}}
+          {{> post-list-item }}
+        {{/foreach}}
+      {{/get}}
+    </ol>
+  </div>
+
+{{/post}}
