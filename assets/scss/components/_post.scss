@@ -116,12 +116,15 @@
     max-width : 100%;
   }
 
-  .image img {
-    width : 100%;
+  .image {
+    margin : 10px;
+
+    img {
+      width : 100%;
+    }
   }
 
   .shadow {
-    margin     : 10px;
     box-shadow : 2px 2px 15px rgba(0, 0, 0, 0.50);
   }
 
@@ -129,7 +132,6 @@
     display         : flex;
     align-items     : center;
     justify-content : center;
-
 
     a.demo-link,
     a.github-link {
